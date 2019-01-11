@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Assinaturas</title>
+  <link rel="stylesheet" href="layout/css/main.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="http://static1.netshoes.net/resources/netshoes/banners/assemailns/gnetshoes.png" alt="Grupo Netshoes" />
+      <!--<a href="http://www.netshoes.com.br">n</a>-->
+    </div>
+    <h2>GERADOR DE ASSINATURAS GRUPO NETSHOES</h2>
+    <form id="generator" action="#" method="get">
+      <div class="data-user">
+        <div>
+          <label for="name">*Nome:</label>
+          <input type="text" required id="name" name="name" value="" placeholder="Seu nome"/>
+        </div>
+        <div>
+          <label for="departament">*Departamento:</label>
+          <input type="text" requiredi id="departament"  name="departament" value="" placeholder="Seu departamento"/>
+        </div>
+        <div>
+          <label for="function">*Cargo:</label>
+          <input type="text" required id="function"  name="function" value="" placeholder="Seu cargo"/>
+        </div>
+        <div>
+          <div class="ns-1-2">
+            <label for="phone">*Telefone:</label>
+            <input class="phone" type="text" id="phone" required name="phone" value="" placeholder="(XX) XXXX-XXXX"/>
+          </div><div class="ns-1-2 space">
+            <label for="ramal">Ramal (opcional):</label>
+            <input type="text" class="ramal" id="ramal" name="ramal" value="" placeholder="XXXX"/>
+          </div>
+        </div>
+        <div>
+          <label for="celPhone">Celular (opcional):</label>
+          <input type="text" class="celPhone" id="celPhone" name="celPhone" value="" placeholder="(XX) XXXXX-XXXX"/>
+        </div>
+        <div>
+          <label for="email">*E-mail</label>
+          <input type="text" name="email" id="email"  value="" type="email" required  placeholder="usuario@netshoes.com"/>
+        </div>
+      </div>
+      <button type="submit" class="send"  name="send">Gerar Assinatura</button>
+    </form>
+    <hr>
+    <div>
+      <h2>Instruções para gerar o email:</h2>
+      <ol>
+        <li>
+          Preencher todo os campos obrigatórios '*'.
+        </li>
+        <li>
+          Desativar seu anti-popup.
+        </li>
+        <li>
+          Ao abrir o pop-up, copiar o conteúdo com os seguintes passos: <b>CTRL + A</b> para selecionar tudo, <b>CTRL + C</b> para copiar e  <b>CTRL + V</b> para colar na sua assinatura.
+        </li>
+      </ol>
+    </div>
+    <div id="wp-signature" style="display: none">
+      <table width="705px">
+      <tr>
+        <td>
+          <div style="font-family:'trebuchet ms',sans-serif; color:#64656a;" class="name-ass"></div>
+          <div style="font-family:'trebuchet ms',sans-serif; color:#64656a; display: block; font-size:12px; margin-bottom: 10px;">
+            <span class="departament-ass"></span> | <span class="function-ass"></span>
+          </div>
+          <div style="font-family:'trebuchet ms',sans-serif; color:#64656a; height: 17px; display: block; font-size:12px">
+            <img src="http://static1.netshoes.net/resources/netshoes/banners/assemailns/phone.png"><span class="phone-ass" style="vertical-align: top;"></span>
+          </div>
+          <div class="wp-cell"  style="font-family:'trebuchet ms',sans-serif; height: 17px; color:#64656a; display: block; font-size:12px">
+            <img src="http://static1.netshoes.net/resources/netshoes/banners/assemailns/phone.png"><span class="celPhone-ass" style="vertical-align: top;"></span>
+          </div>
+          <div class="wp-email" style="font-family:'trebuchet ms',sans-serif; height: 17px; color:#64656a; display: block; font-size:12px; text-decoration:none;">
+            <img src="http://static1.netshoes.net/resources/netshoes/banners/assemailns/email.png"><span class="email-ass" style="vertical-align: top;"></span>
+          </div>
+        </td>
+        <td>
+          <img src="http://static1.netshoes.net/resources/netshoes/banners/assemailns/bar.png"/>
+        </td>
+        <td>
+          <img src="http://static1.netshoes.net/resources/netshoes/banners/assemailns/gnetshoes.png" style="display:block; margin: auto;"/>
+        </td>
+        <td>
+          <img src="http://static1.netshoes.net/resources/netshoes/banners/assemailns/bar.png"/>
+        </td>
+        <td>
+          <img src="http://static1.netshoes.net/resources/netshoes/banners/assemailns/lns.png"/>
+        </td>
+        <td>
+          <img src="http://static1.netshoes.net/resources/netshoes/banners/assemailns/lzt.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:0;" colspan="6" height="40px" width="700px" >
+          <img src="http://static1.netshoes.net/resources/netshoes/banners/assemailns/bottombar.jpg"/>
+        </td>
+      </tr>
+      </table>
+    </div>
+  </div> 
+  <script src="layout/js/jquery-1.11.3.min.js"></script>
+  <script src="layout/js/jquery.mask.min.js"></script>
+  <script src="layout/js/jquery.validate.min.js"></script>
+  <script src="layout/js/main.js"></script>
+  <script>
+    (function(root) {
+      var signature = new SignatureGen('teste'); 
+    }(window));
+  </script>
+
+  
+</body>
+</html>
